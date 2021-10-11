@@ -1,0 +1,28 @@
+{
+  "name": "sq-db-migration-templates",
+  "version": "0.0.1",
+  "description": "Sequelize DB Migrations Templates",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run db:setup",
+    "db:setup": "npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
+    "db:up": "npx sequelize db:migrate",
+    "db:status": "npx sequelize db:migrate:status",
+    "db:reset": "npx sequelize db:drop && npm run db:setup",
+    "db:seed:reset": "npx sequelize db:seed:undo:all && npx sequelize db:seed:all"
+  },
+  "keywords": [
+    "Migrations",
+    "Databases"
+  ],
+  "author": "alfarihfz@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.1.1",
+    "sequelize-cli": "^6.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfarih31/sq-db-migration-tmplt.git"
+  }
+}

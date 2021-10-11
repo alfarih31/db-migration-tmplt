@@ -1,0 +1,10 @@
+const path = require('path');
+
+const isProd = process.env.NODE_ENV==='production';
+
+module.exports = {
+    'env': isProd ? 'production' : 'development',
+    'config': path.resolve('migration.json'),
+    'migrations-path': path.resolve('scripts'),
+    'seeders-path': path.resolve('seeders')
+}

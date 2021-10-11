@@ -1,0 +1,18 @@
+{
+  "production": {
+    "dialect": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "dev",
+    "password": "dev",
+    "database": "prod_db"
+  },
+  "development": {
+    "dialect": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "dev",
+    "password": "dev",
+    "database": "dev_db"
+  }
+}
