@@ -41,7 +41,8 @@ TEST*
 responses*.json
 
 config.json
-migration.json
+sql/migration.json
+nosql/migrate-mongo-config.js
 
 config.production.json
 config.development.json

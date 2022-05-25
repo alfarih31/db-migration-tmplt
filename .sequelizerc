@@ -1,10 +1,11 @@
 const path = require('path');
 
 const isProd = process.env.NODE_ENV==='production';
+const seedRows = process.env.SEED_ROWS === 'true';
 
 module.exports = {
     'env': isProd ? 'production' : 'development',
-    'config': path.resolve('migration.json'),
-    'migrations-path': path.resolve('scripts'),
-    'seeders-path': path.resolve('seeders')
+    'config': path.resolve('sql/migration.json'),
+    'migrations-path': path.resolve('sql/scripts'),
+    'seeders-path': seedRows ? path.resolve('sql/seeders/rows') : path.resolve('sql/seeders')
 }
